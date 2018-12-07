@@ -1,0 +1,25 @@
+@mixin header-container-theme($theme) {
+
+  .header-container {
+    @include elevation('base');
+
+    background-color: get-color($theme);
+  }
+}
+
+@mixin main-container-theme($theme) {
+
+  .main-container {
+    background-color: get-color($theme, darker);
+
+    .store__title {
+      font-size: font-size('heading');
+      color: get-accent-color(get-color($theme, darker));
+    }
+
+    .store__sub-title {
+      font-size: font-size('subheading');
+      color: get-accent-color(get-color($theme, darker), 'secondary');
+    }
+  }
+}

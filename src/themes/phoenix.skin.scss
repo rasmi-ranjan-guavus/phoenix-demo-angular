@@ -1,0 +1,32 @@
+
+// body
+@mixin body-theme($theme) {
+
+  body {
+    background-color: map-get($theme, darker);
+    font-size: font-size('body');
+    font-family: font-family();
+  }
+}
+
+// regular button
+@mixin raised__button-theme($theme) {
+
+  .raised__button {
+    color: get-accent-color(get-color($theme, lighter));
+    font-weight: font-weight('regular');
+    font-size: font-size('button');
+    background-color: get-color($theme, lighter);
+
+
+    &:hover {
+       background-color: get-state-color(get-color($theme, lighter), 'hover');
+    }
+  }
+}
+
+// popup button
+
+// input
+
+// dropdown

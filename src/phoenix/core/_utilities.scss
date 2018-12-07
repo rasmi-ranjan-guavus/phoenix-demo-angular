@@ -1,0 +1,74 @@
+$default-font-size: 16px;
+
+@function rem($value) {
+  $remValue: ($value / $default-font-size) * 1rem;
+
+  @return $remValue;
+}
+
+@function get-accent-color($color, $type: 'default') {
+
+  @if (lightness($color) > 50) {
+      @if $type == 'default' {
+        @return $dark-primary-text;
+      } @else if $type == 'secondary' {
+        @return $dark-secondary-text;
+      } @else if $type == 'disabled' {
+        @return $dark-disabled-text;
+      }
+    } @else {
+    @if $type == 'default' {
+      @return $light-primary-text;
+    } @else if $type == 'secondary' {
+      @return $light-secondary-text;
+    } @else if $type == 'disabled' {
+      @return $light-disabled-text;
+    }
+  }
+}
+
+@function get-color($palette, $value: default, $for-background: null) {
+  $fetched-color: map-get($palette, $value);
+
+  @if $for-background != null {
+    $fetched-color: color-multiply($fetched-color, $for-background);
+  }
+
+  @if type-of($fetched-color) == color {
+    @return $fetched-color;
+  } @else {
+    $error: 'Color for `#{$value}` not found. Make sure arguments are strings.';
+      @error $error;
+  }
+}
+
+@function color-multiply($foreground, $background: null) {
+  @if $background == null {
+    // stylelint-disable-next-line color-no-hex
+    $background: #ffffff;
+  }
+
+  @return $foreground * $background / 255;
+}
+
+@function create-palette($color) {
+  $palette: (
+     lighter: desaturate(lighten($color, 20), 10),
+     light: desaturate(lighten($color, 10), 5),
+     default: $color,
+     dark: saturate(darken($color, 10), 5),
+     darker: saturate(darken($color, 20), 10),
+  );
+
+  @return  $palette;
+}
+
+@function hexToRGB($value) {
+    $red: red($value);
+    $green: green($value);
+    $blue: blue($value);
+
+    @warn $red;
+
+    @return rgb($red, $green, $blue);
+}

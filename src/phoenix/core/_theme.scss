@@ -1,0 +1,16 @@
+
+
+@function create-theme($primary-color, $secondary-color, $font: null, $isLight: true) {
+
+  $theme: (
+    brand-primary-color: $primary-color,
+    brand-secondary-color: $secondary-color,
+    status-color: $gvs-status-colors,
+    background: if($isLight, $gvs-light-background, $gvs-dark-background),
+    foreground: if($isLight, $gvs-light-foreground, $gvs-dark-foreground),
+    font: $font,
+    icons: $font
+  );
+
+  @return $theme;
+}

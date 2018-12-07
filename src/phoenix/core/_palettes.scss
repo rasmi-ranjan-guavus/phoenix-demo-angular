@@ -1,0 +1,69 @@
+$dark-primary-text: rgba(#1F2D3D, 1);
+$dark-secondary-text: rgba(black, 0.6);
+$dark-disabled-text: rgba(black, 0.38);
+
+$light-primary-text: rgba(white, 1);
+$light-secondary-text: rgba(white, 0.6);
+$light-disabled-text: rgba(white, 0.38);
+
+$gvs-status-colors: (
+   error: #E0182D,
+   warning: #EFC100,
+   success: #5AA700,
+);
+
+$gvs-dark-foreground: (
+    default: $dark-primary-text,
+    secondary: $dark-secondary-text,
+    disabled: $dark-disabled-text
+);
+
+$gvs-light-foreground: (
+    default: $light-primary-text,
+    secondary: $light-secondary-text,
+    disabled: $light-disabled-text
+);
+
+$gvs-dark-background: (
+  default: #3C4858,
+  dark: #273444,
+  darker: #1F2d3D
+);
+
+$gvs-light-background: (
+  default: #FFFFFF,
+  dark: #F9FAFC,
+  darker: #EFF2F7,
+);
+
+// $gvs-dark-background: (
+//   lighter: #C0CCDA,
+//   light: #849286,
+//   default: #3C4858,
+//   dark: #273444,
+//   darker: #1F2d3D
+// );
+
+// $gvs-light-background: (
+//   lighter: #FFFFFF,
+//   light: #F9FAFC,
+//   default: #EFF2F7,
+//   dark: #E5E9F2,
+//   darker: #E0E6ED
+// );
+
+$gvs-states: (
+      'hover': 20,   // darken ()
+      'focused': rgba(223, 227, 232, 0.3),   // darken ()
+      'actived': rgba(179, 188, 245, 0.1),  // darken ()
+      'selected': rgba(179, 188, 245, 0.15),  // darken ()
+      'disabled': rgba(249, 250, 251, 1),  // darken ()
+      'pressed': rgba(249, 250, 251, 1)  // darken ()
+    );
+
+@function get-state-color($color, $value: 'hover') {
+   $opacity: map-get($gvs-states, $value);
+
+    @return darken($color, $opacity);
+
+}

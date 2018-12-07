@@ -1,0 +1,8 @@
+
+
+@mixin gvs-card-theme($theme) {
+
+  .card-container {
+   background-color: get-color($theme);
+  }
+}

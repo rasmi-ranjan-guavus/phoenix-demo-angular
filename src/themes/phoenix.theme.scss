@@ -1,0 +1,34 @@
+@import './phoenix.skin';
+@import '../app/app.component';
+@import './phoenix.normalize';
+
+
+@import '../phoenix/styles.scss';
+
+@import './phoenix.structure';
+
+@import '../app/app.skin.scss';
+@import '../app/gvs-card/gvs-card.skin.scss';
+
+
+$gvs-blue: create-palette(#1A73E6);
+$gvs-orange: create-palette(#FF8300);
+
+$dark-theme: create-theme($gvs-blue, $gvs-orange, null);
+
+@mixin gvs-theme($theme) {
+
+  $primary-color: map-get($theme, brand-primary-color);
+  $secondary-color: map-get($theme, brand-secondary-color);
+  $background: map-get($theme, background);
+
+   @include body_theme($background);
+   @include material-icon-theme();
+   @include header-container-theme($background);
+   @include main-container-theme($background);
+   @include gvs-card-theme($background);
+   @include raised__button-theme($primary-color);
+
+}
+
+@include gvs-theme($dark-theme);

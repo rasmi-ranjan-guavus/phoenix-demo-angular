@@ -1,0 +1,65 @@
+
+$font-family-roboto: 'Roboto';
+
+$font-family-SF: 'SFCompactDisplay';
+
+$font-family-apple: '-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif';
+
+$font-weight-data: (
+     light: 300,
+     regular: 400,
+     medium: 500,
+     bold: 700
+);
+
+$font-size-data: (
+  caption: rem(12px),
+  heading: rem(24px),
+  subheading: rem(16px),
+  input: rem(16px),
+  body: rem(16px),
+  button: rem(14px),
+  button-large: rem(16px),
+  display-x-large: rem(36px),
+  display-large: rem(16px),
+  display-medium: rem(10px),
+  display-small: rem(8px),
+);
+
+@function font-size($element) {
+  $fetched-font-size: map-get($font-size-data, $element);
+
+  @if type-of($fetched-font-size) != null {
+    @return $fetched-font-size;
+  } @else {
+    @error 'Font size for `#{$element}` not found';
+  }
+}
+
+
+@function line-height($element) {
+  $fetched-font-size: map-get($font-size-data, $element);
+
+  @if type-of($fetched-font-size) != null {
+    @return $fetched-font-size * 1.4;
+  } @else {
+    @error 'Line height for `#{$element}` not found';
+  }
+}
+
+@function font-weight($element) {
+  $fetched-font-weight: map-get($font-weight-data, $element);
+
+  @if type-of($fetched-font-weight) != null {
+    @return $fetched-font-weight;
+  } @else {
+    @error 'Font weight for `#{$element}` not found';
+  }
+}
+
+@function font-family() {
+   @return $font-family-SF;
+}
+
+
+
