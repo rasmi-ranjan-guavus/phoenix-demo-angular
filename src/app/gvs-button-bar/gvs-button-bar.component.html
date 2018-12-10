@@ -1,0 +1,9 @@
+<div class="button-bar">
+
+  <button class="icon__button" *ngFor="let view of views" (click)="onSelectView($event, view)"
+   [ngClass]="{'active': view.index == selectedView.index, 'disabled': view.disabled}">
+    <i class="material-icons">{{view.iconClass}}</i>
+    {{view.label}}
+  </button>
+
+</div>

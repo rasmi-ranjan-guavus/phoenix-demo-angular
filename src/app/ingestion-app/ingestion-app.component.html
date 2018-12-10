@@ -1,10 +1,29 @@
-<div>
-    <i class="material-icons">alarm</i>
+<div class="ingestion-app-header">
+  <div>
+      <i class="material-icons ingestion-icon">apps</i>
+      <label class="ingestion-app__label">Ingestion App</label>
+  </div>
+  <div>
+      <i class="material-icons ingestion-icon">event</i>
+      <label class="ingestion-app-calender__link">14th May 2018 (12:00) - 14th May 2018 (02:50)</label>
+  </div>
+</div>
+<hr>
+<div class="ingestion-app-sub-header">
+    <label class="ingestion-app__label">Dataset</label>
+    <div class="horizontal-container">
+        <button class="icon__button"><i class="material-icons">add</i>Button</button>
+        <gvs-button-bar [views]='links' [selectedIndex]="0" (selectionChanged)="onViewSelectionChange($event)"></gvs-button-bar>
+    </div>
 </div>
 
-<div>
-
-
+<app-store-container *ngIf="!showGridView"></app-store-container>
+<div *ngIf="showGridView">
+    <ag-grid-angular *ngIf="showGridView"
+    style="width: 100%; height: 500px;"
+    class="ag-theme-material"
+    [rowData]="rowData"
+    [columnDefs]="columnDefs"
+    >
+</ag-grid-angular>
 </div>
-
-<app-store-container></app-store-container>

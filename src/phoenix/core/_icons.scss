@@ -9,13 +9,13 @@
     url(material-design-icons/iconfont/MaterialIcons-Regular.ttf) format('truetype');
 }
 
-@mixin material-icon-theme() {
+@mixin material-icon-theme($theme) {
 
   .material-icons {
     font-family: 'Material Icons';
     font-weight: normal;
     font-style: normal;
-    font-size: 32px;  /* Preferred icon size */
+    font-size: 24px;  /* Preferred icon size */
     display: inline-block;
     line-height: 1;
     text-transform: none;
@@ -23,6 +23,7 @@
     word-wrap: normal;
     white-space: nowrap;
     direction: ltr;
+    color: get-color($theme, 'secondary');
 
     /* Support for all WebKit browsers. */
     -webkit-font-smoothing: antialiased;

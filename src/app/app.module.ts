@@ -1,12 +1,14 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { BrowserModule } from '@angular/platform-browser';
+import { AgGridModule } from 'ag-grid-angular';
 import { AppRoutingModule } from './app-routing.module';
+import { AppStoreComponent } from './app-store/app-store.component';
 import { AppComponent } from './app.component';
-import { StoreContainerComponent } from './store-container/store-container.component';
+import { GvsButtonBarComponent } from './gvs-button-bar/gvs-button-bar.component';
 import { GvsCardComponent } from './gvs-card/gvs-card.component';
 import { IngestionAppComponent } from './ingestion-app/ingestion-app.component';
-import { AppStoreComponent } from './app-store/app-store.component';
+import { StoreContainerComponent } from './store-container/store-container.component';
+
 
 @NgModule({
   declarations: [
@@ -14,11 +16,13 @@ import { AppStoreComponent } from './app-store/app-store.component';
     StoreContainerComponent,
     GvsCardComponent,
     IngestionAppComponent,
-    AppStoreComponent
+    AppStoreComponent,
+    GvsButtonBarComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AgGridModule.withComponents([])
   ],
   providers: [],
   bootstrap: [AppComponent]

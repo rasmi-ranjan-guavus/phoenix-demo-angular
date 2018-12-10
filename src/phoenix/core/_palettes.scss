@@ -12,13 +12,13 @@ $gvs-status-colors: (
    success: #5AA700,
 );
 
-$gvs-dark-foreground: (
+$gvs-light-foreground: (
     default: $dark-primary-text,
     secondary: $dark-secondary-text,
     disabled: $dark-disabled-text
 );
 
-$gvs-light-foreground: (
+$gvs-dark-foreground: (
     default: $light-primary-text,
     secondary: $light-secondary-text,
     disabled: $light-disabled-text

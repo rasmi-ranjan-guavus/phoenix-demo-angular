@@ -3,31 +3,38 @@
 @import './phoenix.normalize';
 
 
-@import '../phoenix/styles.scss';
+@import '../phoenix/styles';
 
 @import './phoenix.structure';
 
-@import '../app/app.skin.scss';
-@import '../app/gvs-card/gvs-card.skin.scss';
+@import '../app/app.skin';
+@import '../app/app-store/app-store.skin';
+@import '../app/gvs-card/gvs-card.skin';
+@import '../app/ingestion-app/ingestion-app.skin';
+@import '../app/gvs-button-bar/gvs-button-bar.skin';
 
 
 $gvs-blue: create-palette(#1A73E6);
 $gvs-orange: create-palette(#FF8300);
 
-$dark-theme: create-theme($gvs-blue, $gvs-orange, null);
+$dark-theme: create-theme($gvs-blue, $gvs-orange, null, false);
 
 @mixin gvs-theme($theme) {
 
   $primary-color: map-get($theme, brand-primary-color);
   $secondary-color: map-get($theme, brand-secondary-color);
   $background: map-get($theme, background);
+  $foreground: map-get($theme, foreground);
 
-   @include body_theme($background);
-   @include material-icon-theme();
+   @include phoenix-theme($theme);
+   @include material-icon-theme($foreground);
    @include header-container-theme($background);
    @include main-container-theme($background);
+   @include ingestion-app-header-theme($background, $foreground);
    @include gvs-card-theme($background);
    @include raised__button-theme($primary-color);
+   @include app-store-theme($foreground);
+   @include button-bar-theme($background, $foreground);
 
 }
 

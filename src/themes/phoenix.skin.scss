@@ -17,11 +17,42 @@
     font-weight: font-weight('regular');
     font-size: font-size('button');
     background-color: get-color($theme, lighter);
-
+    cursor: pointer;
 
     &:hover {
        background-color: get-state-color(get-color($theme, lighter), 'hover');
     }
+  }
+}
+
+@mixin icon-button-theme($theme, $color) {
+
+    .icon__button {
+      background-color: get-color($theme, dark);
+      border: none;
+      color: get-color($color);
+      font-size: font-size('button-large');
+
+      .material-icons {
+        font-size: font-size('button-large');
+        vertical-align: top;
+      }
+
+      &:hover {
+        background-color: get-state-color(get-color($theme, lighter), 'hover');
+      }
+  }
+}
+
+@mixin line-theme($theme) {
+
+  hr {
+    border: 0;
+    height: 1px;
+    background-color: get-color($theme, secondary);
+    opacity: 0.3;
+    margin: 5px 0;
+
   }
 }
 
@@ -30,3 +61,17 @@
 // input
 
 // dropdown
+
+
+@mixin  phoenix-theme($theme) {
+
+  $primary-color: map-get($theme, brand-primary-color);
+  $secondary-color: map-get($theme, brand-secondary-color);
+  $background: map-get($theme, background);
+  $foreground: map-get($theme, foreground);
+
+  @include body_theme($background);
+  @include icon-button-theme($primary-color, $foreground);
+  @include raised__button-theme($primary-color);
+  @include line-theme($foreground);
+}

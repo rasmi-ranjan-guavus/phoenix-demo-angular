@@ -1,0 +1,21 @@
+@mixin button-bar-theme($theme, $foreground) {
+
+  .button-bar {
+
+    .icon__button{
+
+      background-color: get-color($theme);
+      border: 1px solid get-color($foreground, disabled);
+      border-right: 0;
+
+      &:last-child {
+        border-right: 1px solid get-color($foreground, disabled);;
+      }
+    }
+
+  .active, .icon__button:hover {
+    background-color: get-color($theme, darker);
+  }
+}
+
+}

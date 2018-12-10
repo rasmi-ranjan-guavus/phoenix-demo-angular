@@ -11,15 +11,5 @@
 
   .main-container {
     background-color: get-color($theme, darker);
-
-    .store__title {
-      font-size: font-size('heading');
-      color: get-accent-color(get-color($theme, darker));
-    }
-
-    .store__sub-title {
-      font-size: font-size('subheading');
-      color: get-accent-color(get-color($theme, darker), 'secondary');
-    }
   }
 }

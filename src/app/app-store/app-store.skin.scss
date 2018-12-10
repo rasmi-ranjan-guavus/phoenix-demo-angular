@@ -1,0 +1,12 @@
+@mixin app-store-theme($theme) {
+
+  .store__title {
+    font-size: font-size('heading');
+    color: get-color($theme);
+  }
+
+  .store__sub-title {
+    font-size: font-size('subheading');
+    color: get-color($theme, 'secondary');
+  }
+}

@@ -9,7 +9,15 @@
 .raised__button {
   cursor: pointer;
   text-transform: uppercase;
-  border-radius: spacing(12px, xs)
+  border-radius: spacing(12px, xs);
+  outline: none;
+}
+
+.icon__button {
+  outline: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 3px;
 }
 
 // popup button

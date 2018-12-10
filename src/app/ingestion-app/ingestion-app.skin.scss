@@ -1,0 +1,21 @@
+
+@mixin ingestion-app-header-theme($theme, $foreground) {
+
+  .ingestion-app-header {
+   // background-color: get-color($theme, dark);
+  }
+
+  .ingestion-app__label {
+     font-size: font-size('display-large');
+     color: get-color($foreground);
+     line-height: line-height('display-large');
+  }
+
+  .ingestion-app-calender__link {
+    font-size: font-size('caption');
+    color: get-color($foreground);
+    line-height: line-height('caption');
+  }
+
+
+}
