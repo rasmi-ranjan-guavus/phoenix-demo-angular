@@ -1,8 +1,27 @@
 
 
-@mixin gvs-card-theme($theme) {
+@mixin gvs-card-theme($theme, $foreground) {
 
   .card-container {
+    @include elevation(paper);
    background-color: get-color($theme);
+   .card-icon-conttainer {
+
+    background-color: get-color($theme);
+   }
+
+   .card-icon {
+    @include icon-size('x-large');
+  }
+
+  .card-title {
+    font-size: font-size('subheading');
+    color: get-color($foreground);
+  }
+
+  .card-sub-title {
+    font-size: font-size('caption');
+    color: get-color($foreground, secondary);
+  }
   }
 }

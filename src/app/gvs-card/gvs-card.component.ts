@@ -1,9 +1,11 @@
 import {
   Component,
+  Input,
   OnInit
   } from '@angular/core';
 import { Router } from '@angular/router';
   import { Location } from '@angular/common';
+  import { Card } from './card-data';
 
 @Component({
   selector: 'app-gvs-card',
@@ -11,6 +13,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./gvs-card.component.scss']
 })
 export class GvsCardComponent implements OnInit {
+
+  @Input() data: Card;
 
   constructor(private location: Location, private router: Router) { }
 

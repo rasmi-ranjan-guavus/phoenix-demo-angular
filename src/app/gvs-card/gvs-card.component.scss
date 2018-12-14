@@ -1,7 +1,30 @@
 .card-container {
   width: 212px;
   height: 260px;
-
+  border-radius: 5px;
   cursor: pointer;
-  margin: 5px;
+  margin: 12px;
 }
+
+.card-icon-container {
+  height: 120px;
+  vertical-align: middle;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px 5px 0 0;
+}
+
+.card-text {
+  text-align: left;
+}
+
+.card-label-container {
+  padding: 12px;
+  display: grid;
+  grid-template-rows: 20px auto;
+  grid-row-gap: 4px;
+
+}
+
+

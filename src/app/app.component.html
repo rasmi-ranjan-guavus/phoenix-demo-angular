@@ -2,20 +2,29 @@
 <div class="app-container">
 
   <div class="app-container__div header-container">
-   <!--  <header class="header">
+    <header class="header">
 
-        <div class="m-header-left">
-            <svg class="a-header-left__logo" style="width: 48px; height: 48px">
-                <use xlink:href="assets/images/md-eye-symbol.svg#eye"></use>
-              </svg>
-              <hr>
-              <span> Product Name</span>
-        </div>
-    </header>-->
+      <div class="header-left">
+
+        <img src="../assets/svgs/guavus-light.svg" style="width:100px"/>
+        <!-- <svg class="a-header-left__logo" style="width: 48px; height: 48px">
+          <use xlink:href="assets/svgs/guavus-light.svg"></use>
+        </svg> -->
+        <hr class="vertical-line header-line">
+        <span class="app-title">Reflex Analytic Fabric</span>
+      </div>
+      <div class="header-right">
+          <i class="material-icons padded-icons">invert_colors</i>
+          <i class="material-icons padded-icons">notifications</i>
+        <label class="avatar-name">Rasmiranjan Nayak</label>
+        <i class="material-icons ingestion-icon">arrow_drop_down</i>
+          <i class="material-icons ingestion-icon">account_circle</i>
+      </div>
+    </header>
   </div>
   <div class="app-container__div main-container">
 
-      <router-outlet></router-outlet>
+    <router-outlet></router-outlet>
 
   </div>
 </div>

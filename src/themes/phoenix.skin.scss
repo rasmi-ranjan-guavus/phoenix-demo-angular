@@ -30,12 +30,13 @@
     .icon__button {
       background-color: get-color($theme, dark);
       border: none;
-      color: get-color($color);
+      color: get-accent-color(get-color($theme, dark));
       font-size: font-size('button-large');
 
       .material-icons {
         font-size: font-size('button-large');
         vertical-align: top;
+        color: get-accent-color(get-color($theme, dark));
       }
 
       &:hover {
@@ -44,9 +45,9 @@
   }
 }
 
-@mixin line-theme($theme) {
+@mixin horizontal-line-theme($theme) {
 
-  hr {
+  .horizontal-line {
     border: 0;
     height: 1px;
     background-color: get-color($theme, secondary);
@@ -55,6 +56,37 @@
 
   }
 }
+
+@mixin vertical-line-theme($theme) {
+
+  .vertical-line {
+    opacity: 0.3;
+    margin: 0 5px;
+    border:         none;
+    border-left:    1px solid get-color($theme, secondary);
+    width:          1px;
+
+  }
+}
+
+@mixin app-title-theme($theme) {
+
+  .app-title {
+    font-size: font-size('heading');
+    color: get-color($theme);
+    line-height: line-height('heading');
+  }
+}
+
+@mixin avatar-name-theme($theme) {
+
+  .avatar-name {
+    font-size: font-size('display-medium');
+    color: get-color($theme);
+    line-height: line-height('display-medium');
+  }
+}
+
 
 // popup button
 
@@ -73,5 +105,8 @@
   @include body_theme($background);
   @include icon-button-theme($primary-color, $foreground);
   @include raised__button-theme($primary-color);
-  @include line-theme($foreground);
+  @include horizontal-line-theme($foreground);
+  @include vertical-line-theme($foreground);
+  @include app-title-theme($foreground);
+  @include avatar-name-theme($foreground);
 }

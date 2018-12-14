@@ -9,6 +9,7 @@ $default-font-size: 16px;
 @function get-accent-color($color, $type: 'default') {
 
   @if (lightness($color) > 50) {
+    @warn $color ' inside ' lightness($color);
       @if $type == 'default' {
         @return $dark-primary-text;
       } @else if $type == 'secondary' {
@@ -17,6 +18,7 @@ $default-font-size: 16px;
         @return $dark-disabled-text;
       }
     } @else {
+      @warn $color ' outside ' lightness($color);
     @if $type == 'default' {
       @return $light-primary-text;
     } @else if $type == 'secondary' {
@@ -67,8 +69,6 @@ $default-font-size: 16px;
     $red: red($value);
     $green: green($value);
     $blue: blue($value);
-
-    @warn $red;
 
     @return rgb($red, $green, $blue);
 }

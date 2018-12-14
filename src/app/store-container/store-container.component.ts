@@ -1,4 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import {
+  Component,
+  Input,
+  OnInit
+  } from '@angular/core';
 
 @Component({
   selector: 'app-store-container',
@@ -6,6 +10,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./store-container.component.scss']
 })
 export class StoreContainerComponent implements OnInit {
+
+  @Input() data: Array<Object> = [];
 
   constructor() { }
 

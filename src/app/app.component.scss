@@ -17,6 +17,7 @@
 .header-container {
   grid-column: 1 / 2;
   grid-row: 1 / 2;
+  padding: 0 24px;
 }
 
 .main-container {
@@ -36,16 +37,28 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: #fff;  //will go to skin class
-  padding: 10px 20px;
-  background-color: #488EAD;  //will go to skin class
-  height: 70px;
+  height: 56px;
 }
 
 .header-left {
-  font: normal 32px 'Fugaz One', cursive;  //will go to skin class
   display: flex;
   flex-direction: row;
   align-items: center;
   align-content: space-between;
+}
+
+.header-right {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: space-between;
+}
+
+.header-line {
+  height: 46px;
+  margin: 0 10px;
+}
+
+.padded-icons {
+  padding: 8px;
 }

@@ -1,3 +1,18 @@
+$icon-size-data: (
+  small: rem(16px),
+  medium: rem(24px),
+  large: rem(32px),
+  x-large: rem(48px)
+);
+
+@mixin icon-size($value) {
+  @if map-has-key($icon-size-data, $value) {
+    font-size: #{map-get($icon-size-data, $value)};
+  } @else {
+    @warn '#{$value} is not a valid elevation name.';
+  }
+}
+
 @font-face {
   font-family: 'Material Icons';
   font-style: normal;

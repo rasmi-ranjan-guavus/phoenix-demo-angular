@@ -10,6 +10,7 @@ $gvs-status-colors: (
    error: #E0182D,
    warning: #EFC100,
    success: #5AA700,
+   notify: #039BE5
 );
 
 $gvs-light-foreground: (
@@ -35,6 +36,16 @@ $gvs-light-background: (
   dark: #F9FAFC,
   darker: #EFF2F7,
 );
+
+$gvs-visualization-colors: (
+   violet: #8E24AA,
+   indigo: #3949AB,
+   error: #E0182D,
+   warning: #EFC100,
+   success: #5AA700,
+   notify: #039BE5
+);
+
 
 // $gvs-dark-background: (
 //   lighter: #C0CCDA,

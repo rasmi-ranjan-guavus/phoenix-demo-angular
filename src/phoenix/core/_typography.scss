@@ -1,7 +1,7 @@
 
 $font-family-roboto: 'Roboto';
 
-$font-family-SF: 'SFCompactDisplay';
+$font-family-SF: 'SF Compact Display';
 
 $font-family-apple: '-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif';
 
@@ -22,8 +22,9 @@ $font-size-data: (
   button-large: rem(16px),
   display-x-large: rem(36px),
   display-large: rem(20px),
-  display-medium: rem(10px),
-  display-small: rem(8px),
+  display-medium: rem(14px),
+  display-small: rem(10px),
+  display-x-small: rem(8px),
 );
 
 @function font-size($element) {

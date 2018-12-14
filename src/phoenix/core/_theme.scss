@@ -8,6 +8,7 @@
     status-color: $gvs-status-colors,
     background: if($isLight, $gvs-light-background, $gvs-dark-background),
     foreground: if($isLight, $gvs-light-foreground, $gvs-dark-foreground),
+    visualization: $gvs-visualization-colors,
     font: $font,
     icons: $font
   );

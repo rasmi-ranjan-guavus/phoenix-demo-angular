@@ -1,3 +1,11 @@
 <div class="card-container" (click)="handleCardClick($event)">
 
+  <div class="card-icon-container" [ngStyle]="{'background-color': data.bgColor}">
+      <i class="material-icons card-icon">{{data.iconClass}}</i>
+  </div>
+  <div class="card-label-container">
+      <div class="card-title card-text">{{data.name}}</div>
+      <div class="card-sub-title card-text">{{data.desc}}</div>
+  </div>
+
 </div>

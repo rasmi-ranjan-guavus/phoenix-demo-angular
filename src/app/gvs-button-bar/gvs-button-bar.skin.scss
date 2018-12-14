@@ -8,6 +8,10 @@
       border: 1px solid get-color($foreground, disabled);
       border-right: 0;
 
+      .material-icons {
+        color: get-accent-color(get-color($theme));
+      }
+
       &:last-child {
         border-right: 1px solid get-color($foreground, disabled);;
       }
