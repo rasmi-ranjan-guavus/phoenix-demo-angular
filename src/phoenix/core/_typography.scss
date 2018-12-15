@@ -37,12 +37,13 @@ $font-size-data: (
   }
 }
 
-
 @function line-height($element) {
   $fetched-font-size: map-get($font-size-data, $element);
 
-  @if type-of($fetched-font-size) != null {
-    @return $fetched-font-size * 1.4;
+  @if type-of($fetched-font-size) != null && $fetched-font-size < 16 {
+    @return  $fetched-font-size * 1.4;
+  } @else if type-of($fetched-font-size) != null && $fetched-font-size >= 16 {
+    @return  $fetched-font-size * 1.5;
   } @else {
     @error 'Line height for `#{$element}` not found';
   }

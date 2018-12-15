@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: 56px auto 30px;
-  grid-gap: 10px 10px;
+  grid-gap: 0 10px;
   padding: 0;
   height: calc(100vh);
   width: calc(100vw);
@@ -20,8 +20,13 @@
   padding: 0 24px;
 }
 
+.company__logo {
+  width: 100px;
+}
+
 .main-container {
- padding: 0 24px;
+ padding: 0 0;
+ height: calc(100vh - 170px);
 }
 
 .footer-container {

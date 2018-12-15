@@ -17,7 +17,7 @@
 $gvs-blue: create-palette(#1A73E6);
 $gvs-orange: create-palette(#FF8300);
 
-$dark-theme: create-theme($gvs-blue, $gvs-orange, null, false);
+$dark-theme: create-theme($gvs-blue, $gvs-orange, null, true);
 
 @mixin gvs-theme($theme) {
 

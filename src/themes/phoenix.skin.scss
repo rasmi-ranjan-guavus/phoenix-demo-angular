@@ -52,7 +52,6 @@
     height: 1px;
     background-color: get-color($theme, secondary);
     opacity: 0.3;
-    margin: 5px 0;
 
   }
 }
@@ -65,13 +64,12 @@
     border:         none;
     border-left:    1px solid get-color($theme, secondary);
     width:          1px;
-
   }
 }
 
 @mixin app-title-theme($theme) {
 
-  .app-title {
+  .app__title {
     font-size: font-size('heading');
     color: get-color($theme);
     line-height: line-height('heading');

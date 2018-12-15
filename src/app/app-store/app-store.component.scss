@@ -9,7 +9,6 @@
   justify-content: center;
   grid-gap: 10px 10px;
 
-
 .store__title {
   text-align: center;
   height: 30px;
@@ -18,8 +17,14 @@
 .store__sub-title {
   text-align: center;
   height: 48px;
-  width: 600px;
+  width: 710px;
   padding-left: 100px;
+  padding-right: 100px;
 
 }
+
+.app-store-card-container {
+  width: 710px;
+}
+
 }

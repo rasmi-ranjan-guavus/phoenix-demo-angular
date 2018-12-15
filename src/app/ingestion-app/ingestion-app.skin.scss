@@ -1,8 +1,9 @@
 
 @mixin ingestion-app-header-theme($theme, $foreground) {
 
-  .ingestion-app-header {
-   // background-color: get-color($theme, dark);
+  .ingestion-app-header-container {
+    @include elevation(paper);
+    background-color: get-color($theme, dark);
   }
 
   .ingestion-app__label {

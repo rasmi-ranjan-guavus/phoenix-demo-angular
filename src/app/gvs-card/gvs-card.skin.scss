@@ -14,14 +14,22 @@
     @include icon-size('x-large');
   }
 
-  .card-title {
+  .card__title {
     font-size: font-size('subheading');
     color: get-color($foreground);
   }
 
-  .card-sub-title {
+  .card__sub-title {
     font-size: font-size('caption');
     color: get-color($foreground, secondary);
   }
+
+  .card-footer__label {
+    font-size: font-size('caption');
+    color: get-color($foreground, secondary);
+    line-height: line-height('button-large');
+  }
+
+
   }
 }
