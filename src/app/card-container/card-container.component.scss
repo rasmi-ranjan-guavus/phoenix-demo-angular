@@ -1,6 +1,8 @@
 .store-container {
-  display: flex;
-  flex-flow: row wrap;
+  display: grid;
+  grid-template-rows: repeat(auto-fill, 260px);
+  grid-template-columns: repeat(auto-fill, 212px);
+   grid-gap: 24px 24px;
 }
 
 
