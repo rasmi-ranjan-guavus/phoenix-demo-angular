@@ -1,18 +1,18 @@
 {
     "list": {
-        "name": "Design Token Dem",
+        "name": "Design Token Demo",
         "organization": "guavus-a-thales-company",
         "colors": [
             {
                 "name": "group",
                 "colors": [
                     {
-                        "name": "gvs-button-color",
-                        "value": "#1a73e6"
-                    },
-                    {
                         "name": "gvs-text-color",
                         "value": "#ffffff"
+                    },
+                    {
+                        "name": "gvs-button-color",
+                        "value": "#1a73e6"
                     }
                 ]
             }
@@ -71,3 +71,4 @@
         "shadowSections": [],
         "readOnly": true
     }
+}
