@@ -5,7 +5,7 @@
   $theme: (
     brand-primary-color: $primary-color,
     brand-secondary-color: $secondary-color,
-    status-color: $gvs-status-colors,
+    status-color: $gvs-support-colors,
     background: if($isLight, $gvs-light-background, $gvs-dark-background),
     foreground: if($isLight, $gvs-light-foreground, $gvs-dark-foreground),
     visualization: $gvs-visualization-colors,

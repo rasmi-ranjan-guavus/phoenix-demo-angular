@@ -1,8 +1,98 @@
 /* You can add global styles to this file, and also import other style files */
 
-@import "~ag-grid-community/dist/styles/ag-grid.css";
-@import "~ag-grid-community/dist/styles/ag-theme-material.css";
+
+@import '~ag-grid/src/styles/ag-theme-material';
+@import 'themes/grid-theme';
+
+.infoRenderContainer {
+  width: 100%;
+  display: inline-flex;
+  .infoIconRenderer{
+    height: 12px ;
+    width: 12px ;
+    margin: 3px 5px 0px 5px;
+    opacity: .7 ;
+    cursor: pointer;
+    content: url('assets/svgs/Info.svg') !important;
+    display: none;
+  }
+  .infoLabelRenderer{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: calc(100% - 20px);
+  }
+}
+
+// @import "~ag-grid-community/dist/styles/ag-grid.css";
+//  @import "~ag-grid-community/dist/styles/ag-theme-material.css";
+
+//  $primary-color: #2196F3; // blue-500
+// $accent-color: #FFD740;
+
+ :host {
+  & /deep/ .ag-selection-checkbox {
+    margin: 5px;
+  }
+
+  & /deep/ .ag-header-cell {
+    text-align: left;
+    padding-left: 5px;
+
+    &:hover {
+      text-align: left;
+      padding-left: 5px;
+    }
+  }
+
+  & /deep/ .ag-cell-no-focus {
+    border-style: solid;
+    border-width: 1px;
+  }
+
+  & /deep/ .ag-header-cell-label {
+    padding: 2px;
+  }
+
+  & /deep/ .ag-cell-value {
+    padding-bottom: 5px;
+  }
+
+  & /deep/ .ag-cell {
+    padding-left: 5px;
+    outline-width: 0;
+  }
 
 
-$primary-color: #2196F3; // blue-500
-$accent-color: #FFD740;
+  & /deep/ .ag-header-icon {
+    float: right;
+    padding-left: 5px;
+  }
+
+  & /deep/ .ag-paging-row-summary-panel {
+    width: 550px;
+  }
+
+  div#overlay {
+    pointer-events: all !important;
+  }
+
+
+  & /deep/ .rightTextAlignGridCellStyle {
+    text-align: right;
+    padding-right: 7px;
+  }
+}
+
+:host {
+  & /deep/ .rightTextAlignGridHeaderStyle {
+    .ag-header-cell-label {
+      text-align: right;
+      padding-right: 7px;
+    }
+  }
+}
+
+
+
+

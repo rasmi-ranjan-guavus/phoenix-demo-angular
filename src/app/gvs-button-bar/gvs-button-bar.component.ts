@@ -59,9 +59,9 @@ export class GvsButtonBarComponent implements OnInit {
   onSelectView(event: any, view: any) {
 
     const currentTarget: any = event.currentTarget;
-    console.log(currentTarget.className + ' nn before ' + currentTarget.className.search(' active'));
+
     if (currentTarget && currentTarget.className.search(' active') < 0) {
-     console.log(currentTarget + ' nn ' + view);
+
       this.selectedView = view;
       this.selectedIndex = view.index;
 
@@ -77,7 +77,7 @@ export class GvsButtonBarComponent implements OnInit {
   setSelectedView(index: any) {
     const filterArray: Array<any> = this.views.filter(item => item['index'] === index);
     if (filterArray && filterArray.length > 0) {
-      console.log(filterArray[0].index + ' setSelectedView ' + index);
+
       this.selectedView = filterArray[0];
     }
   }

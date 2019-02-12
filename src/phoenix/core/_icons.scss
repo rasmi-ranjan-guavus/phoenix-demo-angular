@@ -9,7 +9,7 @@ $icon-size-data: (
   @if map-has-key($icon-size-data, $value) {
     font-size: #{map-get($icon-size-data, $value)};
   } @else {
-    @warn '#{$value} is not a valid elevation name.';
+    @warn '#{$value} is not a valid icon size.';
   }
 }
 

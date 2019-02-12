@@ -5,19 +5,40 @@
   box-sizing: border-box;
 }
 
+.gvs-button {
+    line-height: 1;
+    padding: 6px 10px;
+    border-radius: 4px;
+    display: inline-block;
+    text-decoration: none;
+    color: #000;
+    background-color: #e1e6e4;
+    font-size: 12px;
+    outline: none !important;
+    cursor: pointer;
+    border: none;
+ }
+
+ .gvs-button>span {
+  vertical-align: top;
+  margin-right: 5px;
+  cursor: pointer;
+  float: left;
+}
+
 
 
 // regular button
 .raised__button {
   cursor: pointer;
   text-transform: uppercase;
-  border-radius: spacing(12px, xs);
+  border-radius: 3px;
   outline: none;
 }
 
 .icon__button {
   outline: none;
-  padding: 8px 12px;
+  padding: spacing(xs) spacing(sm);
   cursor: pointer;
   border-radius: 3px;
 }

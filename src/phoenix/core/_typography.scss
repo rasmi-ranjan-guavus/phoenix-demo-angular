@@ -3,6 +3,11 @@ $font-family-roboto: 'Roboto';
 
 $font-family-SF: 'SF Compact Display';
 
+// @font-face {
+//   font-family: SF Compact Display;
+//   src: url(./assets/font/SFCompactDisplay.ttf);
+// }
+
 $font-family-apple: '-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif';
 
 $font-weight-data: (
@@ -40,9 +45,9 @@ $font-size-data: (
 @function line-height($element) {
   $fetched-font-size: map-get($font-size-data, $element);
 
-  @if type-of($fetched-font-size) != null && $fetched-font-size < 16 {
+  @if type-of($fetched-font-size) != null and $fetched-font-size < 16 {
     @return  $fetched-font-size * 1.4;
-  } @else if type-of($fetched-font-size) != null && $fetched-font-size >= 16 {
+  } @else if type-of($fetched-font-size) != null and $fetched-font-size >= 16 {
     @return  $fetched-font-size * 1.5;
   } @else {
     @error 'Line height for `#{$element}` not found';

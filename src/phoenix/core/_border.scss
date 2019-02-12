@@ -1,0 +1,41 @@
+
+$corner-radius-data: (
+  none: 0,
+  xs: rem(1px),
+  sm: rem(3px),
+  md: rem(5px),
+  lg: rem(7px)
+);
+
+$border-thickness-data: (
+   none: 0,
+   xs: rem(0.5px),
+   sm: rem(1px),
+   md: rem(2px),
+   lg: rem(3px),
+   xl: rem(5px)
+);
+
+
+@function corner-radius($value: md) {
+
+  $fetched-value: map-get($corner-radius-data, $value);
+
+  @if type-of($fetched-value) != null and type-of($fetched-value) == number {
+    @return $fetched-value;
+  } @else {
+    @error 'Corner radius of `#{$value}` not found.';
+  }
+}
+
+
+@function border-thickness($value: sm) {
+
+  $fetched-value: map-get($border-thickness-data, $value);
+
+  @if type-of($fetched-value) != null and type-of($fetched-value) == number {
+    @return $fetched-value;
+  } @else {
+    @error 'Border thickness of `#{$value}` not found.';
+  }
+}

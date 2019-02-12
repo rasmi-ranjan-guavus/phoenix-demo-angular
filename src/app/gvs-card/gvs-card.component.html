@@ -9,7 +9,11 @@
   </div>
 
   <div class="card-footer-container" *ngIf="data.data && data.data.status && data.data.status != ''">
-    <label class="card-footer__label">status: {{data.data.status}}</label>
+    <div>
+        <label class="card-footer__label">status:</label>
+        <label class="card-footer__label status" [ngStyle]="{'color': getStatusColor(data.data.status)}"> {{data.data.status}}</label>
+    </div>
+
     <i class="material-icons">more_vert</i>
   </div>
 </div>

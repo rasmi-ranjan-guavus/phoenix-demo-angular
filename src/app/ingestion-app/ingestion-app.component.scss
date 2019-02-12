@@ -1,10 +1,11 @@
+@import 'phoenix/styles';
 
 .ingestion-app-header {
     display: flex;
     flex-direction: row;
     height: 50px;
     justify-content: space-between;
-    padding: 0 24px;
+    padding: spacing(none) spacing(lg);
     align-items: center;
 }
 
@@ -13,12 +14,12 @@
   flex-direction: row;
   height: 60px;
   justify-content: space-between;
-  padding: 24px 24px;
+  padding: spacing(lg) spacing(lg);
   align-items: center;
 }
 
 .ingestion-app-body-container {
-  padding:24px 24px;
+  padding: spacing(lg) spacing(lg);
   overflow-y: scroll;
   height: 100%;
 }
@@ -38,12 +39,35 @@
 
 .ingestion-icon {
   vertical-align: top;
-  padding-right: 8px;
+  padding-right: spacing(xs);
 }
 
 .grid-view {
   width: 100%;
   height: 500px;
 }
+
+.data-grid-container {
+  height: 550px;
+  overflow: scroll;
+}
+
+.dialog-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: left;
+
+  .dialog__icon {
+    width: 48px;
+  }
+
+  .dialog__label {
+    text-align: left;
+    padding-left: spacing(md);
+  }
+}
+
 
 

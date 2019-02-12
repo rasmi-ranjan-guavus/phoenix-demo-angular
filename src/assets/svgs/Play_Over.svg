@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+  <defs>
+    <style>
+      .a {
+        fill: #00e0b8;
+      }
+    </style>
+  </defs>
+  <title>Play_Over_1</title>
+  <path class="a" d="M8,1.08333a7,7,0,1,1-7,7,7.00793,7.00793,0,0,1,7-7m0-1a8,8,0,1,0,8,8,8,8,0,0,0-8-8Z"/>
+  <polygon class="a" points="5.5 12.583 12.5 8.083 5.5 3.583 5.5 12.583"/>
+</svg>

@@ -1,0 +1,173 @@
+
+ @import '../../node_modules/@guavus/ui-kit-grid/dist/theme';
+ @import '../../node_modules/@angular/material/theming';
+
+ $gvs-light: (
+  50 : #fdfdfe,
+  100 : #fafbfd,
+  200 : #f7f9fb,
+  300 : #f4f6f9,
+  400 : #f1f4f8,
+  500 : #eff2f7,
+  600 : #edf0f6,
+  700 : #ebeef5,
+  800 : #e8ecf3,
+  900 : #e4e8f1,
+  A100 : #ffffff,
+  A200 : #ffffff,
+  A400 : #ffffff,
+  A700 : #ffffff,
+  contrast: (
+      50 : #000000,
+      100 : #000000,
+      200 : #000000,
+      300 : #000000,
+      400 : #000000,
+      500 : #1f2d3d,
+      600 : #000000,
+      700 : #000000,
+      800 : #000000,
+      900 : #000000,
+      A100 : #000000,
+      A200 : #000000,
+      A400 : #000000,
+      A700 : #000000,
+  )
+ );
+
+ $gvs-dark-blue: (
+  50 : #e4e6e8,
+  100 : #bcc0c5,
+  200 : #8f969e,
+  300 : #626c77,
+  400 : #414d5a,
+  500 : #1f2d3d,
+  600 : #1b2837,
+  700 : #17222f,
+  800 : #121c27,
+  900 : #0a111a,
+  A100 : #5b97ff,
+  A200 : #2876ff,
+  A400 : #0059f4,
+  A700 : #004fda,
+  contrast: (
+      50 : #000000,
+      100 : #000000,
+      200 : #000000,
+      300 : #ffffff,
+      400 : #ffffff,
+      500 : #bcc0c5,
+      600 : #ffffff,
+      700 : #ffffff,
+      800 : #ffffff,
+      900 : #ffffff,
+      A100 : #000000,
+      A200 : #ffffff,
+      A400 : #ffffff,
+      A700 : #ffffff,
+  )
+);
+
+
+@mixin phonenix-grid-theme($theme, $font-config, ) {
+
+  $primary: map-get($theme, primary);
+  $background: map-get($theme, background);
+  $accent: map-get($theme, accent);
+  $foreground: map-get($theme, foreground);
+
+  .ag-fresh,
+  .ag-theme-material {
+    .ag-header-container {
+      .ag-header-row {
+        background: mat-color($primary, 500);
+        border-bottom: 2px solid mat-color($primary, 600);
+        // border: none !important;
+        color: mat-color($primary, 100);
+      }
+      .ag-header-cell-resize::after {
+        border-right: none !important;
+      }
+      .ag-header-cell {
+        color: mat-color($primary, default-contrast);
+        // border-right: 2px solid mat-color($foreground, divider);
+        &:hover {
+          background: mat-color($primary, 300) !important;
+        }
+        .ag-header-cell-label {
+          .ag-header-cell-text {
+            font-size: 14px !important;
+            font-weight: normal;
+            line-height: 20px;
+            padding-top: 5px;
+}}
+
+      }
+    }
+    .ag-body {
+      .ag-row {
+        border-bottom: none !important;
+        color: mat-color($primary, default-contrast) !important;
+        .ag-cell {
+          text-align: left;
+          border: none !important;
+         // border-right: 2px solid mat-color($foreground, divider) !important;
+        }
+      }
+      .ag-row-even {
+        background-color: mat-color($primary, 500) !important;
+      }
+      .ag-row-odd {
+        background-color: mat-color($primary, 500) !important;
+      }
+      .ag-row-even:hover, .ag-row-odd:hover{
+        background-color: mat-color($primary, 600) !important;
+      }
+      .ag-row-odd.ag-row-selected, .ag-row-even.ag-row-selected {
+        background-color: mat-color($primary, 700) !important;
+        color: mat-color($primary, default-contrast) !important;
+      }
+    }
+    .ag-row .ag-cell:last-child,
+    .ag-header-row .ag-header-cell:last-child {
+      border-right: none !important;
+    }
+
+  }
+}
+
+
+@font-face {
+  font-family: Roboto;
+  src: url(./assets/font/Roboto-Regular.ttf);
+}
+
+$gvs-default-font: mat-typography-config(
+    $font-family: 'Roboto, sans-serif',
+    $headline: mat-typography-level(16px, 20px, 400), // popup title
+    $body-1: mat-typography-level(10px, 10px, 400),
+    $body-2: mat-typography-level(12px, 14px, 400),
+    $button: mat-typography-level(12px, 14px, 400),
+    $title:  mat-typography-level(20px, 32px, 500), // application title
+    $subheading-2: mat-typography-level(16px, 28px, 400),
+    $subheading-1: mat-typography-level(10px, 12px, 400),
+    $display-4: mat-typography-level(14px, 16px, 700),  //
+    $display-3: mat-typography-level(12px, 12px, 700),   // bold
+    $display-2: mat-typography-level(9px, 12px, 400)    // warning
+);
+
+@mixin gvs-grid-font($theme, $font-config) {
+  .ag-fresh .ag-header-container .ag-header-cell .ag-header-cell-label .ag-header-cell-text,
+  .ag-theme-material .ag-header-container .ag-header-cell .ag-header-cell-label .ag-header-cell-text {
+      font-size: mat-font-size($font-config, display-4) !important;
+  }
+}
+
+
+$gvs-theme-primary: mat-palette($gvs-dark-blue, 800, 500, 900);
+$gvs-theme-accent: mat-palette($mat-light-blue, 500, 200, 900);
+$gvs-theme-warn: mat-palette($mat-red, 500, 200, 900);
+$gvs-theme: mat-light-theme($gvs-theme-primary, $gvs-theme-accent, $gvs-theme-warn);
+$gvs-dark-theme: mat-dark-theme($gvs-theme-primary, $gvs-theme-accent, $gvs-theme-warn);
+
+@include phonenix-grid-theme($gvs-dark-theme, $gvs-default-font);

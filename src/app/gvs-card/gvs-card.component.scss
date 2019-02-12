@@ -1,8 +1,21 @@
+@import 'phoenix/styles';
+
 .card-container {
   width: 212px;
   height: 260px;
   border-radius: 5px;
   cursor: pointer;
+}
+
+@media only screen and (max-height: 600px) {
+  .card-container {
+    width: 212px;
+    height: 140px;
+
+    .card-icon-container {
+      display: none;
+    }
+  }
 }
 
 .card-icon-container {
@@ -19,15 +32,15 @@
 }
 
 .card-label-container {
-  padding: 12px;
+  padding: spacing(sm);
   display: grid;
   grid-template-rows: 20px auto;
-  grid-row-gap: 4px;
+  grid-row-gap: spacing(2xs);
 
 }
 
 .card-footer-container {
-  padding: 0 12px;
+  padding: spacing(none) spacing(sm);
   display: flex;
   justify-content: space-between;
   flex-direction: row;

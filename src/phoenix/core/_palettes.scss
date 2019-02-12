@@ -1,12 +1,12 @@
 $dark-primary-text: rgba(#1F2D3D, 1);
-$dark-secondary-text: rgba(black, 0.6);
-$dark-disabled-text: rgba(black, 0.38);
+$dark-secondary-text: rgba($dark-primary-text, 0.6);
+$dark-disabled-text: rgba($dark-primary-text, 0.38);
 
 $light-primary-text: rgba(white, 1);
-$light-secondary-text: rgba(white, 0.6);
-$light-disabled-text: rgba(white, 0.38);
+$light-secondary-text: rgba($light-primary-text, 0.6);
+$light-disabled-text: rgba($light-primary-text, 0.38);
 
-$gvs-status-colors: (
+$gvs-support-colors: (
    error: #E0182D,
    warning: #EFC100,
    success: #5AA700,
@@ -37,6 +37,8 @@ $gvs-light-background: (
   darker: #EFF2F7,
 );
 
+
+// sequential Color Scheme, Diverging Color Scheme, Qualitative Color Scheme:
 $gvs-visualization-colors: (
    violet: #8E24AA,
    indigo: #3949AB,

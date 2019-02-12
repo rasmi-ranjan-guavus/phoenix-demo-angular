@@ -9,11 +9,11 @@
       <label class="ingestion-app-calender__link">14th May 2018 (12:00) - 14th May 2018 (02:50)</label>
     </div>
   </div>
-  <hr class="horizontal-line">
+  <hr class="horizontal-line demo">
   <div class="ingestion-app-sub-header">
     <label class="ingestion-app__label">Dataset</label>
     <div class="horizontal-container">
-      <button class="icon__button"><i class="material-icons">add</i>New Dataset</button>
+      <button class="demo__button icon__button" (click)="showPopup()"><i class="material-icons">add</i>New Dataset</button>
       <gvs-button-bar [views]='links' [selectedIndex]="0" (selectionChanged)="onViewSelectionChange($event)"></gvs-button-bar>
     </div>
   </div>
@@ -21,10 +21,24 @@
 
 <div class="ingestion-app-body-container">
   <gvs-card-container *ngIf="!showGridView" [cardData]="cardData"></gvs-card-container>
-  <div class="grid-view" *ngIf="showGridView">
-    <ag-grid-angular class="grid-view" *ngIf="showGridView" class="ag-theme-material" [rowData]="rowData" style="width: 100%;
+  <div class="data-grid-container" *ngIf="showGridView">
+    <!-- <ag-grid-angular class="grid-view" *ngIf="showGridView" class="ag-theme-material" [rowData]="rowData" style="width: 100%;
     height: 500px;"
       [columnDefs]="columnDefs">
-    </ag-grid-angular>
+    </ag-grid-angular> -->
+
+    <gvs-grid #datagrid class="ag-theme-material" [gridOptions]="gridOptions"
+       [data]="data" [columnDefs]="columnDefs"
+        (gridReady)="onGridReady($event)">
+  </gvs-grid>
   </div>
 </div>
+
+<gvs-dialog [(visible)]="showDialog">
+    <div class="dialog-container">
+        <i class="material-icons dialog__icon">check_circle</i>
+        <div class="dialog__label">Anamoly Detection created successfully. <br>
+          you are ready to proceed using the new dataset</div>
+    </div>
+
+  </gvs-dialog>

@@ -1,0 +1,32 @@
+@import 'phoenix/styles';
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.dialog {
+  z-index: 1000;
+  position: fixed;
+  right: spacing(lg);
+  top: spacing(lg);
+  min-height: 80px;
+  height: 80px;
+  width: 420px;
+  max-width: 520px;
+  padding: spacing(md);
+  border-radius: 5px;
+}
+
+.dialog__close-button {
+  border: 0;
+  background: none;
+  position: absolute;
+  top: spacing(xs);
+  right: spacing(xs);
+}

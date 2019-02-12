@@ -8,7 +8,12 @@ import { AppComponent } from './app.component';
 import { CardContainerComponent } from './card-container/card-container.component';
 import { GvsButtonBarComponent } from './gvs-button-bar/gvs-button-bar.component';
 import { GvsCardComponent } from './gvs-card/gvs-card.component';
+import { IconCellRendererComponent } from './ingestion-app/icon-cell-renderer/icon-cell-renderer.component';
 import { IngestionAppComponent } from './ingestion-app/ingestion-app.component';
+ import { GridModule } from '@guavus/ui-kit-grid';
+ import { DialogComponent } from './dialog/dialog.component';
+ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 
 @NgModule({
@@ -18,13 +23,20 @@ import { IngestionAppComponent } from './ingestion-app/ingestion-app.component';
     GvsCardComponent,
     IngestionAppComponent,
     AppStoreComponent,
-    GvsButtonBarComponent
+    GvsButtonBarComponent,
+    DialogComponent,
+    IconCellRendererComponent
+  ],
+  entryComponents: [
+    IconCellRendererComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     AgGridModule.withComponents([]),
-    HttpClientModule
+    HttpClientModule,
+    GridModule.forRoot(),
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

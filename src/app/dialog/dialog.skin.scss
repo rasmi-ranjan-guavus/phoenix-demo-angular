@@ -1,0 +1,14 @@
+@mixin  gvs-dialog-theme($theme) {
+
+  .dialog {
+    @include elevation(intrusive);
+
+    background-color: get-color($theme, success);
+    color: get-accent-color(get-color($theme, success));
+    font-size: font-size(display-medium);
+  }
+
+  .dialog__close-button {
+    font-size: font-size(display-large);
+  }
+}

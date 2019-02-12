@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+  <defs>
+    <style>
+      .a {
+        fill: #949b9c;
+      }
+    </style>
+  </defs>
+  <title>Icon_Minus_Default</title>
+  <g>
+    <path class="a" d="M8,1.5A6.5,6.5,0,1,1,1.5,8,6.50736,6.50736,0,0,1,8,1.5M8,0a8,8,0,1,0,8,8A8.00008,8.00008,0,0,0,8,0Z"/>
+    <rect class="a" x="3.78662" y="7.25005" width="8.42725" height="1.5"/>
+  </g>
+</svg>

@@ -9,4 +9,10 @@
     font-size: font-size('subheading');
     color: get-color($theme, 'secondary');
   }
+
+  .card-icon {
+    @include icon-size(x-large);
+    color: white;
+
+  }
 }

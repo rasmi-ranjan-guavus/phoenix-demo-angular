@@ -4,32 +4,37 @@
 
   .card-container {
     @include elevation(paper);
-   background-color: get-color($theme);
-   .card-icon-conttainer {
 
+   background-color: get-color($theme);
+
+   .card-icon-conttainer {
     background-color: get-color($theme);
    }
 
-   .card-icon {
-    @include icon-size('x-large');
+  .card-icon {
+    @include icon-size(x-large);
+    color: get-accent-color(get-color($theme));
+
   }
 
   .card__title {
-    font-size: font-size('subheading');
+    font-size: font-size(subheading);
     color: get-color($foreground);
   }
 
   .card__sub-title {
-    font-size: font-size('caption');
+    font-size: font-size(caption);
     color: get-color($foreground, secondary);
   }
 
   .card-footer__label {
-    font-size: font-size('caption');
+    font-size: font-size(caption);
     color: get-color($foreground, secondary);
-    line-height: line-height('button-large');
+    line-height: line-height(button-large);
   }
 
-
+  .status {
+    font-weight: font-weight(medium);
+  }
   }
 }

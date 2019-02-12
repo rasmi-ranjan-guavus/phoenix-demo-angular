@@ -25,13 +25,21 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
-              "src/data"
+              "src/data",
+              "src/phoenix/data"
             ],
             "styles": [
               "src/styles.scss",
               "src/themes/phoenix.theme.scss",
-              "src/themes/phoenix.normalize.scss"
+              "src/themes/phoenix.normalize.scss",
+              "./node_modules/ag-grid/src/styles/ag-grid.scss",
+              "./node_modules/ag-grid/src/styles/ag-theme-material.scss"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src"
+              ]
+            },
             "scripts": []
           },
           "configurations": {

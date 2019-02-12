@@ -1,5 +1,5 @@
 
-@mixin ingestion-app-header-theme($theme, $foreground) {
+@mixin ingestion-app-theme($theme, $foreground, $status) {
 
   .ingestion-app-header-container {
     @include elevation(paper);
@@ -18,5 +18,11 @@
     line-height: line-height('caption');
   }
 
+  .dialog-container {
+  & .dialog__icon {
+    @include icon-size('x-large');
+    color: get-accent-color(get-color($status, success));
+  }
+}
 
 }

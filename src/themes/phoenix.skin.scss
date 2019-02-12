@@ -1,3 +1,6 @@
+@import '../app/dialog/dialog.skin';
+@import '../app/gvs-button-bar/gvs-button-bar.skin';
+@import '../app/gvs-card/gvs-card.skin';
 
 // body
 @mixin body-theme($theme) {
@@ -13,21 +16,37 @@
 @mixin raised__button-theme($theme) {
 
   .raised__button {
+
+    @include elevation(bound);
+
     color: get-accent-color(get-color($theme, lighter));
     font-weight: font-weight('regular');
     font-size: font-size('button');
     background-color: get-color($theme, lighter);
-    cursor: pointer;
 
     &:hover {
-       background-color: get-state-color(get-color($theme, lighter), 'hover');
+       background-color: get-state-color(get-color($theme, lighter), hover);
     }
   }
 }
 
+@mixin secondary__button-theme($theme) {
+
+  .secondary__button {
+
+    color: get-accent-color(get-color($theme, lighter));
+    font-weight: font-weight('regular');
+    font-size: font-size('button');
+    border: 1px solid get-color($theme, lighter);
+  }
+}
+
+
+// button with icon
 @mixin icon-button-theme($theme, $color) {
 
     .icon__button {
+
       background-color: get-color($theme, dark);
       border: none;
       color: get-accent-color(get-color($theme, dark));
@@ -42,6 +61,23 @@
       &:hover {
         background-color: get-state-color(get-color($theme, lighter), 'hover');
       }
+  }
+}
+
+@mixin hbox-theme($theme) {
+
+  .hbox {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+@mixin vbox-theme($theme) {
+
+  .vbox {
+   display: flex;
+   flex-direction: column;
+
   }
 }
 
@@ -60,7 +96,7 @@
 
   .vertical-line {
     opacity: 0.3;
-    margin: 0 5px;
+    margin: spacing(none) spacing(xs);
     border:         none;
     border-left:    1px solid get-color($theme, secondary);
     width:          1px;
@@ -99,12 +135,16 @@
   $secondary-color: map-get($theme, brand-secondary-color);
   $background: map-get($theme, background);
   $foreground: map-get($theme, foreground);
+  $status: map-get($theme, status-color);
 
-  @include body_theme($background);
+  @include body-theme($background);
   @include icon-button-theme($primary-color, $foreground);
   @include raised__button-theme($primary-color);
+  @include gvs-card-theme($background, $foreground);
+  @include button-bar-theme($background, $foreground);
   @include horizontal-line-theme($foreground);
   @include vertical-line-theme($foreground);
   @include app-title-theme($foreground);
   @include avatar-name-theme($foreground);
+  @include gvs-dialog-theme($status);
 }
