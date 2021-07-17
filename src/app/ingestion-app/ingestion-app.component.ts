@@ -6,11 +6,6 @@ import {
   } from '@angular/core';
 import { Card } from '../gvs-card/card-data';
   import { HttpClient } from '@angular/common/http';
-  import {
-    ColDef,
-    GridOptions
-  } from 'ag-grid';
-  import { GridComponent } from '@guavus/ui-kit-grid';
   import { DataGridConfig } from './data-grid-config';
   import { DatasetVO } from './types';
   import { isNil} from 'lodash';
@@ -26,9 +21,7 @@ export class IngestionAppComponent implements OnInit, AfterViewInit {
   public data;
   showDialog = false;
 
-  @ViewChild('datagrid') datagrid: GridComponent;
-
-  gridOptions: GridOptions = {
+  gridOptions: any = {
     enableSorting: true,
     enableColResize: true,
     rowSelection: 'single',
@@ -98,6 +91,9 @@ cardData: any;
   }
 
   ngAfterViewInit() {
+
+    // this.datagrid.columnDefs = this.columnDefs;
+    // this.datagrid.gridOptions = this.gridOptions;
     // this.http
     // .get('./phoenix/data/style-data.json')
     // .toPromise()
@@ -257,14 +253,14 @@ cardData: any;
 
     this.data = this.rowData;
 
-    if (this.datagrid.gridOptions.api) {
-      this.datagrid.gridOptions.api.sizeColumnsToFit();
-      this.datagrid.gridOptions.api.hideOverlay();
+    // if (this.datagrid.gridOptions.api) {
+    //   this.datagrid.gridOptions.api.sizeColumnsToFit();
+    //   this.datagrid.gridOptions.api.hideOverlay();
 
-      this.datagrid.gridOptions.api.resetRowHeights();
-      this.datagrid.gridOptions.api.refreshCells();
-      this.datagrid.gridOptions.api.refreshHeader();
-    }
+    //   this.datagrid.gridOptions.api.resetRowHeights();
+    //   this.datagrid.gridOptions.api.refreshCells();
+    //   this.datagrid.gridOptions.api.refreshHeader();
+    // }
   }
 
   showPopup() {

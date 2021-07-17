@@ -40,7 +40,7 @@ export class AppStoreComponent implements OnInit {
       name: 'Data Playbook',
       desc: 'Demesne far hearted suppose venture excited see had has. Dependent on so extremely delivered by.',
       iconClass: 'dns',
-      bgColor: '#EFC100'
+      bgColor: '#8F7200'
 
     },
     {

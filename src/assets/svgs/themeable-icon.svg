@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="46px" height="34px" viewBox="0 0 46 34" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>themeable icon</title>
+    <desc>Created with Sketch.</desc>
+    <g id="themeable-icon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-2" transform="translate(11.000000, 5.000000)" fill-rule="nonzero" stroke="#000000">
+            <path d="M12,0 C5.376,0 0,5.376 0,12 C0,18.624 5.376,24 12,24 C18.624,24 24,18.624 24,12 C24,5.376 18.624,0 12,0 Z" id="Path"></path>
+            <path d="M12.5,4 C14.4366667,4 16,5.56333333 16,7.5 C16,9.43666667 14.4366667,11 12.5,11 C10.5633333,11 9,9.43666667 9,7.5 C9,5.56333333 10.5633333,4 12.5,4 Z" id="Path"></path>
+            <path d="M12,21 C9.08333333,21 6.505,19.3746032 5,16.9111111 C5.035,14.384127 9.66666667,13 12,13 C14.3216667,13 18.965,14.384127 19,16.9111111 C17.495,19.3746032 14.9166667,21 12,21 Z" id="Path"></path>
+        </g>
+    </g>
+</svg>

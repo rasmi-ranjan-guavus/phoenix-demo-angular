@@ -31,13 +31,13 @@ export class GvsCardComponent implements OnInit {
     let color;
     switch (type) {
       case  'ready':
-      color = 'green';
+      color = '#33FF99';
       break;
       case  'fail':
-      color = 'red';
+      color = '#FF9999';
       break;
       case  'waiting':
-      color = '#FF8300';
+      color = '#FDE001';
       break;
       case  'ingested':
       color = 'blue';

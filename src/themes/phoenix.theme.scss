@@ -11,8 +11,6 @@
 @import '../app/ingestion-app/ingestion-app.skin';
 
 
-
-
 $gvs-blue: create-palette(#1A73E6);
 $gvs-orange: create-palette(#FF8300);
 
@@ -38,10 +36,10 @@ $light-theme: create-theme($gvs-blue, $gvs-orange, null, true);
 
 }
 
-@include gvs-theme($light-theme);
+@include gvs-theme($dark-theme);
 
 .light-theme-phoenix {
-  @include gvs-theme($dark-theme);
+  @include gvs-theme($light-theme);
 }
 
 

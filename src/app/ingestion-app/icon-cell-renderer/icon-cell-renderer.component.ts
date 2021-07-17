@@ -3,11 +3,6 @@ import {
   OnInit
   } from '@angular/core';
 import {
-  ColDef,
-  GridCellDef
-  } from 'ag-grid';
-import { AgRendererComponent } from 'ag-grid-angular';
-import {
   cloneDeep,
   isNil
   } from 'lodash';
@@ -47,7 +42,7 @@ export class IconCellRendererComponent {
   displayIcon = false;
   constructor() { }
 
-  agInit(params: { colDef: ColDef, data: DatasetVO }): void {
+  agInit(params: { colDef: any, data: DatasetVO }): void {
     switch (params.colDef.field) {
       case GRID_DELETE_ROW.fieldName: {
         this.iconRenderOptions = GRID_DELETE_ROW;

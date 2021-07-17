@@ -31,9 +31,7 @@
             "styles": [
               "src/styles.scss",
               "src/themes/phoenix.theme.scss",
-              "src/themes/phoenix.normalize.scss",
-              "./node_modules/ag-grid/src/styles/ag-grid.scss",
-              "./node_modules/ag-grid/src/styles/ag-theme-material.scss"
+              "src/themes/phoenix.normalize.scss"
             ],
             "stylePreprocessorOptions": {
               "includePaths": [

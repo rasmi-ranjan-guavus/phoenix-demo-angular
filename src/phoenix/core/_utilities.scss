@@ -7,7 +7,6 @@ $default-font-size: 16px;
 }
 
 @function get-accent-color($color, $type: 'default') {
-  @warn lightness($color) $color;
   @if (lightness($color) > 50) {
       @if $type == 'default' {
         @return $dark-primary-text;

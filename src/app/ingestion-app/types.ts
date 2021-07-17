@@ -1,8 +1,8 @@
-import { ColDef, ColGroupDef } from "ag-grid";
+
 
 export interface GridConfig {
     gridOptions: any;
-    columnDefs: (ColDef | ColGroupDef)[];
+    columnDefs: any[];
   }
 
 export interface DatasetVO {
